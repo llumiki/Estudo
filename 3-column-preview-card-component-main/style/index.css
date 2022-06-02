@@ -1,0 +1,145 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  --typography-primary: "Lexend Deca", sans-serif;
+  --typography-title: "Big Shoulders Display", cursive;
+}
+body{
+  height: 100vh;
+  font-size: 15px;
+  background-color: var(--Very-light-gray);
+  font-weight: var(--typography-primary);
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sr-only{
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+.containers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2em;
+}
+.container{
+  box-sizing: border-box;
+  position: relative;
+  width: 310px;
+  height: 500px;
+  padding: 3.3em;
+}
+.container_title{
+  font-family: var(--typography-title);
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+}
+.container_p{
+  color: var(--Transparent-white);
+  line-height: 1.6rem;
+}
+.container_button{
+  padding: 0.8em 2em;
+  position: absolute;
+  bottom: 3.2em;
+  
+  font-family: var(--typography-primary);
+  font-weight: 400;
+  text-decoration: none;
+  background-color: var(--Very-light-gray);
+  border: 3px solid var(--Very-light-gray);
+  border-radius: 2em;
+
+}
+.button_orange{
+  color: var(--Bright-orange);
+}
+.button_dark{
+  color: var(--Dark-cyan);
+}
+.button_verydark{
+  color: var(--Very-dark-cyan);
+}
+.container--sedans{
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.container--suvs{
+  background-color: var(--Dark-cyan);
+}
+.container--luxury{
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.atribuition{
+  font-size: 11px;
+  text-align: center;
+}
+.atribuition a{
+  color: cornflowerblue;
+}
+@media screen and (max-width: 950px){
+  body{
+    height: unset;
+  }
+  .containers{
+    flex-direction: column;
+    padding: 2.5em;
+  }
+  .container--sedans{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .container--luxury{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+@media(hover:hover){
+  .button_orange:hover{
+    animation: hoverorange 0.5s forwards;
+  }
+  .button_dark:hover{
+    animation: hoverdark 0.5s forwards;
+  }
+  .button_verydark:hover{
+    animation: hovervarydark 0.5s forwards;
+  }
+}
+@keyframes hoverorange{
+  100%{
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+  }
+}
+@keyframes hoverdark{
+  100%{
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+  }
+}
+@keyframes hoververydark{
+  100%{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray);
+  }
+}

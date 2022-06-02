@@ -1,0 +1,43 @@
+body, ul{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: black;
+  text-decoration: none;
+  font-family: 'futura';
+}
+a:hover{
+  background-color: rgba(0, 0, 0, .05);
+}
+#logo{
+  font-size: 1.5rem;
+}
+#header{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  justify-content: space-between;
+  background-color: rgb(35, 27, 37);
+}
+#menu{
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+#menu a{
+  display: block;
+  padding: .5rem;
+}
+#btn-mobile{
+  display: none;
+}
+@media (max-width: 600px){
+  #btn-mobile{
+    display: block;
+  }
+  #menu{
+    display: none;
+  }
+}
